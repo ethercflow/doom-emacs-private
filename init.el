@@ -103,6 +103,7 @@
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
+       wakatime
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -162,7 +163,6 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
        yaml                ; JSON, but readable
-       wakatime
 
        :email
        ;;(mu4e +gmail)
