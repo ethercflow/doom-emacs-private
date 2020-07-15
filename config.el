@@ -31,6 +31,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "/workspace/org/")
+(setq org-superstar-headline-bullets-list '("⁖" "⁖" "⁖" "⁖" ))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -69,6 +70,14 @@
 
 (setq rustic-lsp-server 'rust-analyzer)
 (setq wakatime-api-key "1043fd7f-32c2-4017-ae05-91571781f7ba")
+
+(setq +mu4e-mu4e-mail-path "~/.mbsync"
+      mu4e-get-mail-command "mbsync -v gmail")
+(set-email-account! "ethercflow@gmail.com"
+  '((mu4e-sent-folder       . "/[Gmail].Sent Mail")
+    (smtpmail-smtp-user     . "ethercflow@gmail.com")
+    (mu4e-compose-signature . "---\nWenbo Zhang"))
+  t)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
