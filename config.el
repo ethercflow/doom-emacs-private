@@ -103,6 +103,17 @@
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
 
+(map! :after ccls
+    :map (c-mode-map c++-mode-map)
+    :n "C-h" #'tmux-pane-omni-window-left
+    :n "C-j" #'tmux-pane-omni-window-down
+    :n "C-k" #'tmux-pane-omni-window-up
+    :n "C-l" #'tmux-pane-omni-window-right
+    :n "C-c h" (cmd! (ccls-navigate "U"))
+    :n "C-c j" (cmd! (ccls-navigate "R"))
+    :n "C-c k" (cmd! (ccls-navigate "L"))
+    :n "C-c l" (cmd! (ccls-navigate "D")))
+
 (after! (vterm evil-collection)
   (add-hook!
    'vterm-mode-hook
